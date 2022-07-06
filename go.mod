@@ -20,7 +20,7 @@ require (
 	github.com/prometheus/client_golang v1.11.0
 	github.com/prometheus/common v0.29.0
 	github.com/stretchr/testify v1.7.0
-	github.com/weaveworks/common v0.0.0-20220629114710-e3b70df0f08b
+	github.com/weaveworks/common v0.0.0-20220706100410-67d27ed40fae
 	go.etcd.io/etcd v3.3.25+incompatible
 	go.etcd.io/etcd/api/v3 v3.5.0
 	go.etcd.io/etcd/client/v3 v3.5.0

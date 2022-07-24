@@ -58,6 +58,7 @@
 * [ENHANCEMENT] ring: optimize shuffle-shard computation when lookback is used, and all instances have registered timestamp within the lookback window. In that case we can immediately return origial ring, because we would select all instances anyway. #181
 * [ENHANCEMENT] Runtimeconfig: Allow providing multiple runtime config yaml files as comma separated list file paths. #183
 * [ENHANCEMENT] Memberlist: Add cluster label support to memberlist client. #187
+* [ENHANCEMENT] ring: DoBatch now differentiates between 4xx and 5xx GRPC errors and keeps track of them separately. It only returns when there is a quorum of either error class. If your errors do not implement `GRPCStatus() *Status` from google.golang.org/grpc/status, then this change does not affect you.
 * [BUGFIX] spanlogger: Support multiple tenant IDs. #59
 * [BUGFIX] Memberlist: fixed corrupted packets when sending compound messages with more than 255 messages or messages bigger than 64KB. #85
 * [BUGFIX] Ring: `ring_member_ownership_percent` and `ring_tokens_owned` metrics are not updated on scale down. #109
